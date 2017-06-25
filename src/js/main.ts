@@ -1,6 +1,6 @@
 import { Cliente, ICliente } from 'cliente'
 
-let novoCliente = new Cliente("lucas ro", "l roselli", 22);
+let novoCliente = new Cliente("lucas", "l roselli", 22);
 
 //mostra o valor do cliente lucas
 
