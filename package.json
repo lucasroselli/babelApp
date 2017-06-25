@@ -1,0 +1,22 @@
+{
+  "name": "tsdapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" ",
+    "build:css": "stylus -w src/css/site.styl -c -o build/bundle.css",
+    "build:js": "tsc -w",
+    "server": "watchhttpserver -s -o",
+    "start": "npm-run-all --parallel build:css build:js server"
+  },
+  "author": "Lucas Leonardi Roselli",
+  "license": "ISC",
+  "devDependencies": {
+    "npm-run-all": "^4.0.2",
+    "stylus": "^0.54.5",
+    "typescript": "^2.3.4",
+    "watch-http-server": "^0.7.6"
+  },
+  "dependencies": {}
+}
