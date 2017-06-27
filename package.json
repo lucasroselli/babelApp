@@ -6,16 +6,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" ",
     "build:css": "stylus -w src/css/site.styl -c -o build/bundle.css",
-    "build:js": "tsc -w",
+    "build:js": "babel -w src/js/*.js -o build/bundle.js",
     "server": "watchhttpserver -s -o",
     "start": "npm-run-all --parallel build:css build:js server"
   },
   "author": "Lucas Leonardi Roselli",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "babel-preset-env": "^1.5.2",
+    "babel-preset-import-export": "^1.0.2",
     "npm-run-all": "^4.0.2",
     "stylus": "^0.54.5",
-    "typescript": "^2.3.4",
     "watch-http-server": "^0.7.6"
   },
   "dependencies": {}
