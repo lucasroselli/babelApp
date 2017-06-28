@@ -1,4 +1,4 @@
-import { Cliente, ICliente } from 'cliente'
+import { Cliente } from 'cliente.js'
 
 let novoCliente = new Cliente("lucas", "l roselli", 22);
 

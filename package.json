@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" ",
     "build:css": "stylus -w src/css/site.styl -c -o build/bundle.css",
-    "build:js": "babel -w src/js/*.js -o build/bundle.js",
+    "build:js": "babel -w src/js --out-dir build/js",
     "server": "watchhttpserver -s -o",
     "start": "npm-run-all --parallel build:css build:js server"
   },
@@ -14,9 +14,10 @@
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.24.1",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-amd": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-systemjs": "^6.24.1",
     "babel-preset-env": "^1.5.2",
-    "babel-preset-import-export": "^1.0.2",
+    "babel-preset-es2015": "^6.24.1",
     "npm-run-all": "^4.0.2",
     "stylus": "^0.54.5",
     "watch-http-server": "^0.7.6"

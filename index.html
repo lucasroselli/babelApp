@@ -1,25 +1,35 @@
 <html>
-    <head>  
-        <title>App with typescript</title>
 
-        <link rel="stylesheet" href="/build/bundle.css" />
-        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.js" ></script>-->
+<head>
+    <title>App with typescript</title>
 
-        <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
+    <link rel="stylesheet" href="/build/bundle.css" />
 
-    </head>
-    <body>
-        <h2>Welcome hello world!!</h2>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.js" ></script>    -->
 
-        <div id="content"></div>
-        
-        <script src="/build/bundle.js" ></script>
-        <!--<script>require(["main"]);</script>-->
-    </body>
+    <!--<script src="/build/bundle.js" ></script>-->
+    <!--<script>require(["main"]);</script>-->
+
+
+</head>
+
+<body>
+    <h2>Welcome hello world!!</h2>
+
+    <div id="content"></div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.20.14/system.js">
+    </script>
+    <script>
+        System.config({ "baseURL": "build/js" });
+        System.import("main.js");
+    </script>
+</body>
+
 </html>
 
 
 <!--<script data-main="/build/bundle.js" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.js"></script>-->
-        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.js" 
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.js" 
         data-main="src/js/main.js"></script>-->
-        <!--<script>require(["main"], run => run());</script>-->
+<!--<script>require(["main"], run => run());</script>-->
